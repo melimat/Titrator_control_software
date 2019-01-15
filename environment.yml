@@ -1,0 +1,5 @@
+name: Titrator
+dependencies:
+  - python=3.6
+  - pyserial
+  - matplotlib
