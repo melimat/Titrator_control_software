@@ -3,7 +3,7 @@ import time
 import csv
 import matplotlib.pyplot as plt
 
-plt.ion()
+
 x_array = []
 y_array = []
 micropipette_amount = 200
@@ -37,11 +37,6 @@ while True:
         print(adds)
         print(ph)
         writer.writerow([adds, ph])
-        plt.clf()
-        plt.scatter(x_array, y_array)
-        plt.plot(x_array, y_array)
-        plt.draw()
-        plt.pause(1e-17)
         time.sleep(0.1)
 
 
