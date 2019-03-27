@@ -37,6 +37,9 @@ def serialPlot(com_port, baudrate, timeout, log_path, mp_amount):
             xar.append(adds * mp_amount)
             yar.append(ph)
             ax.clear()
+            ax.set_ylim(0, 14)
+            ax.set_xlabel("Amount of titration standard [\u03BCl]")
+            ax.set_ylabel("pH")
             ax.plot(xar, yar)
 
     root = Tk()
@@ -48,6 +51,11 @@ def serialPlot(com_port, baudrate, timeout, log_path, mp_amount):
     fig = figure.Figure(figsize=(2, 2))
     fig.subplots_adjust(left=0.1, right=0.8)
     ax = fig.add_subplot(1, 1, 1)
+    ax.autoscale(enable=True, axis="x", tight=True)
+    ax.autoscale_view(scalex=True, scaley=False)
+    ax.set_ylim(0, 14)
+    ax.set_xlabel("Amount of titration standard [\u03BCl]")
+    ax.set_ylabel("pH")
 
 
 
